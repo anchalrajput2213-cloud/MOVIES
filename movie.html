@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movies App</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: white;
+    padding: 30px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.search-box{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#Movies{
+    width: 350px;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #333;
+    border-radius: 8px;
+}
+
+#Movies:focus{
+    border-color: royalblue;
+}
+
+#btn{
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    background-color: royalblue;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btn:hover{
+    background-color: blueviolet;
+}
+
+#container{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+}
+
+.card{
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+}
+
+.card img{
+    width: 100%;
+    height: 350px;
+}
+
+.card h2{
+    margin: 15px 10px;
+    font-size: 22px;
+    color: #222;
+}
+
+.card p{
+    margin: 8px;
+    color: #555;
+    font-size: 16px;
+}
+input{
+    justify-content: center;
+    align-items: center;
+}
+button{
+    justify-content: center;
+    align-items: center;
+}
+    </style>
+    <h1>Movies App</h1>
+    <input type="text" id="Movies" placeholder="Enter Movie Name">
+    <button id="btn">Search</button>
+    <div id="container"></div>
+    <script src="movie.js"></script>
+</body>
+</html>
